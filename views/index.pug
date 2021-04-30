@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div(class='wrapper')
+    each message in messages
+      div
+        div(class='name')= message.user
+        div(class='speech-bubble')= message.text
+      div(class='date') #{message.added.toString().slice(0, 21)}
+    a(href='/new') 
+      div(class='form-button') Send a message
+
+

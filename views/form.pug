@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Enter your name and message below...
+  div(class='wrapper')
+    form(method="POST" action="/new")
+      input(type="text" name='name' placeholder="name")
+      input(type="text" name='messageText' placeholder="message")
+      div(class='button-bar')
+        a(href='/')
+          button(type="button" class='cancel') Cancel
+        button(type="submit") Send
+  
+
+
